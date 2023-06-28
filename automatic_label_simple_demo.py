@@ -20,7 +20,7 @@ import torchvision.transforms as TS
 
 
 # Hyper-Params
-SOURCE_IMAGE_PATH = "./assets/demo9.jpg"
+SOURCE_IMAGE_PATH = "./assets/003003.jpg"
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 GROUNDING_DINO_CONFIG_PATH = "GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"

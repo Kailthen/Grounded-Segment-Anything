@@ -12,10 +12,12 @@ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # GroundingDINO config and checkpoint
 GROUNDING_DINO_CONFIG_PATH = "GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"
+# GROUNDING_DINO_CHECKPOINT_PATH = "https://huggingface.co/ShilongLiu/GroundingDINO/blob/main/groundingdino_swint_ogc.pth"
 GROUNDING_DINO_CHECKPOINT_PATH = "./groundingdino_swint_ogc.pth"
 
 # Segment-Anything checkpoint
 SAM_ENCODER_VERSION = "vit_h"
+# SAM_CHECKPOINT_PATH = "https://huggingface.co/spaces/facebook/ov-seg/blob/main/sam_vit_h_4b8939.pth"
 SAM_CHECKPOINT_PATH = "./sam_vit_h_4b8939.pth"
 
 # Building GroundingDINO inference model
@@ -28,8 +30,9 @@ sam_predictor = SamPredictor(sam)
 
 
 # Predict classes and hyper-param for GroundingDINO
-SOURCE_IMAGE_PATH = "./assets/demo2.jpg"
-CLASSES = ["The running dog"]
+# SOURCE_IMAGE_PATH = "./assets/demo2.jpg"
+SOURCE_IMAGE_PATH = "./assets/003003.jpg"
+CLASSES = ["traffic sign.traffic signal."]
 BOX_THRESHOLD = 0.25
 TEXT_THRESHOLD = 0.25
 NMS_THRESHOLD = 0.8

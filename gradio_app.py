@@ -28,7 +28,7 @@ from diffusers import StableDiffusionInpaintPipeline
 # BLIP
 from transformers import BlipProcessor, BlipForConditionalGeneration
 
-import openai
+# import openai
 
 def show_anns(anns):
     if len(anns) == 0:
