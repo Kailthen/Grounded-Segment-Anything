@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": ".:${PYTHONPATH}"
+            }
+        },
+        {
+            "name": "Python: attach debug server",
+            "type": "python",
+            "request": "attach",
+            "connect": {
+                "host": "localhost", // replace this with remote machine name
+                "port": 5678, // python3 -m debugpy --wait-for-client --listen 0.0.0.0:5678
+            },
+            "justMyCode": false
+        },
+    ]
+}
